@@ -31,6 +31,7 @@ $films = array(
     "Acteurs" => array("Tom Hanks", "Michael Clarke Duncan"),
     "Genres" => array("Fantastique" , "Policier"),
     "Like" => 20030,
+    "Private" => false,
     "Poster" => "http://www.notrecinema.com/images/cache/la-ligne-verte-poster_50432_40929.jpg",
   ),
   array(
@@ -41,6 +42,7 @@ $films = array(
     "Acteurs" => array("Clint Eastwood", "Bee Vangplus"),
     "Genres" => array("Drame" , "Thriller"),
     "Like" => 1030,
+    "Private" => false,
     "Poster" => "http://images.moviepostershop.com/gran-torino-movie-poster-2008-1020420150.jpg",
   ),
   array(
@@ -51,6 +53,7 @@ $films = array(
     "Acteurs" => array("Liam Neeson", "Ben Kingsleyplus"),
     "Genres" => array("Historique", "Drame"),
     "Like" => 60070,
+    "Private" => false,
     "Poster" => "http://www.avoir-alire.com/IMG/arton4582.jpg?1414452369",
   ),
   array(
@@ -61,6 +64,7 @@ $films = array(
     "Acteurs" => array("Christian Bale", "Heath Ledger"),
     "Genres" => array("Action" , "Drame"),
     "Like" => 89030,
+    "Private" => false,
     "Poster" => "http://fr.web.img2.acsta.net/medias/nmedia/18/63/97/89/18949761.jpg",
   ),
   array(
@@ -71,6 +75,7 @@ $films = array(
     "Acteurs" => array("Marlon Brando", "Al Pacino"),
     "Genres" => array("Policier" , "Drame"),
     "Like" => 60180,
+    "Private" => true,
     "Poster" => "http://fr.web.img4.acsta.net/medias/nmedia/18/35/57/73/18660716.jpg",
   ),
   array(
@@ -81,6 +86,7 @@ $films = array(
     "Acteurs" => array("John Travolta", "Samuel L. Jackson"),
     "Genres" => array("Policier" , "Thriller"),
     "Like" => 40078,
+    "Private" => false,
     "Poster" => "http://www.movpins.com/big/MV5BMTU2Mjc0MTg4MF5BMl5BanBnXkFtZTcwOTA0MzU5Ng/pulp-fiction-(1994)-large-picture.jpg",
   ),
   array(
@@ -91,6 +97,7 @@ $films = array(
     "Acteurs" => array("Elijah Wood", "Sean Astin"),
     "Genres" => array("Fantastique" , "Aventure"),
     "Like" => 80050,
+    "Private" => false,
     "Poster" => "http://papystreaming.com/fr/files/2013/09/Le-Seigneur-des-anneaux-Le-Retour-du-roi.jpg",
   ),
   array(
@@ -101,6 +108,7 @@ $films = array(
     "Acteurs" => array("Brad Pitt", "Edward Norton"),
     "Genres" => array("Thriller" , "Drame"),
     "Like" => 8010,
+    "Private" => false,
     "Poster" => "https://ok2disconnectportfolio.files.wordpress.com/2012/02/fight-club-hi-res-poster-vertical-a31.jpg",
   ),
   array(
@@ -111,6 +119,7 @@ $films = array(
     "Acteurs" => array("François Cluzet", "Omar Sy"),
     "Genres" => array("Comédie"),
     "Like" => 89010,
+    "Private" => true,
     "Poster" => "http://ourfaithinaction.net/wp-content/uploads/2012/07/the-intouchables-movie-poster1.jpg",
   ),
   array(
@@ -121,6 +130,7 @@ $films = array(
     "Acteurs" => array("Viviane Pascal", "Antoine-Olivier "),
     "Genres" => array("Drame"),
     "Like" => 59070,
+    "Private" => false,
     "Poster" => "https://41.media.tumblr.com/64a0d6d20e5e419b4b894aef542a7abb/tumblr_nm5m3etarH1szjhaso1_500.png",
   )
 );
