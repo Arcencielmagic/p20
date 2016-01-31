@@ -1,7 +1,7 @@
 <?php
 
 // Chargement de tous les films
-include_once("data.php");
+include_once("database.php");
 
 // Récupére tous les films
 function films_all(){
