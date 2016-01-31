@@ -1,4 +1,5 @@
 <?php include "films.php" ?>
+<?php  $like = $_GET["like"];?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -18,18 +19,27 @@
   <div class="col-12 col-md-12">
     <h1>Cours PHP</h1>
     <hr />
+    <form method="get" action="">
+      <h5>Filtre</h5>
+      <input placeholder="like" type="text" name="like" />
+      <button type="submit">Soumettre</button>
+    </form>
+    <hr />
+
     <div class="container">
       <div class="row">
         <?php foreach($films as $key => $film) { ?>
-          <div class="col-md-3">
-            <a href="page_film.php?id=<?php echo $key ?>">
-              <img src="<?php echo $film["Poster"] ?>" class="img-mov img-thumbnail">
-              <div><?php echo $film["Nom"] ?></div>
-              <div class="line2">
-                <?php echo $film["Annee"] ?> (<?php echo $film["Durée"] ?>)<br>
-              </div>
-            </a>
-          </div>
+          <?php if($film["Like"] > $like) { ?>
+            <div class="col-md-3">
+              <a href="page_film.php?id=<?php echo $key ?>">
+                <img src="<?php echo $film["Poster"] ?>" class="img-mov img-thumbnail">
+                <div><?php echo $film["Nom"] ?></div>
+                <div class="line2">
+                  <?php echo $film["Annee"] ?> (<?php echo $film["Durée"] ?>)<br>
+                </div>
+              </a>
+            </div>
+          <?php } ?>
         <?php } ?>
       </div>
     </div>

@@ -13,8 +13,7 @@
     <hr />
     <form method="post" action="">
       <h5>Formulaire</h5>
-      <input placeholder="email" type="email" name="email" />
-      <input placeholder="password" type="password" name="password" />
+      <input class=""type="text" name="nom" />
       <button type="submit">Soumettre</button>
     </form>
     <hr />
@@ -25,7 +24,7 @@
       </p>
       <p>
         <strong><?php echo 'Données dans $_POST';?><strong><br>
-        <pre><?php print_r($_POST["password"])?></pre>
+        <pre><?php print_r($_POST)?></pre>
       </p>
       <p>
         <strong><?php echo 'Données dans $_REQUEST';?><strong><br>
