@@ -4,7 +4,7 @@
 require_once("config.php");
 require_once("functions.php");
 
-$acteurs = get_all_acteurs();
+$films = get_all_films();
 
 ?>
 
@@ -18,14 +18,20 @@ $acteurs = get_all_acteurs();
 </head>
 <body>
   <div class="col-md-12">
-    <h1>Exemple 3</h1>
+    <h1>Question 1</h1>
     <hr />
     <div class="container">
-      <ul class="row">
-        <?php foreach($acteurs as $acteur): ?>
-          <li class="col-md-12"><?php echo $acteur ?></li>
+      <div class="row">
+        <?php foreach($films as $film): ?>
+          <div class="col-md-3">
+            <img src="<?php echo $film["Affiche"] ?>" class="img-mov img-thumbnail">
+            <div><?php echo $film["Nom"] ?></div>
+            <div class="line2">
+              <?php echo $film["Année"] ?> (<?php echo $film["Durée"] ?>)<br>
+            </div>
+          </div>
         <?php endforeach; ?>
-      </ul>
+      </div>
     </div>
   </div>
 </body>

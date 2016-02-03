@@ -4,7 +4,7 @@
 require_once("config.php");
 require_once("functions.php");
 
-$acteurs = get_all_acteurs();
+$annees = get_all_annees_unique();
 
 ?>
 
@@ -18,12 +18,12 @@ $acteurs = get_all_acteurs();
 </head>
 <body>
   <div class="col-md-12">
-    <h1>Exemple 3</h1>
+    <h1>Question 4</h1>
     <hr />
     <div class="container">
       <ul class="row">
-        <?php foreach($acteurs as $acteur): ?>
-          <li class="col-md-12"><?php echo $acteur ?></li>
+        <?php foreach($annees as $annee): ?>
+          <li class="col-md-12"><?php echo $annee ?></li>
         <?php endforeach; ?>
       </ul>
     </div>

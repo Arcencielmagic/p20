@@ -4,15 +4,15 @@
 require_once("config.php");
 require_once("functions.php");
 
-// Déclaration des valeurs
-$annee = null;
+// Déclaration des valeurss
+$id = null;
 
 // Récupération des valeurs
-if(isset($_POST["annee"])){
-  $annee = $_POST["annee"];
+if (isset($_GET["id"])) {
+  $id = $_GET["id"];
 }
 
-$films = annee_sup($annee);
+$film = get_film_by_id($id);
 
 ?>
 
@@ -26,7 +26,7 @@ $films = annee_sup($annee);
 </head>
 <body>
   <div class="col-md-12">
-    <h1>Exemple 2</h1>
+    <h1>Question 2</h1>
     <hr />
     <form method="post" action="">
       <input placeholder="Année" type="text" name="annee" />
@@ -35,15 +35,13 @@ $films = annee_sup($annee);
     <hr />
     <div class="container">
       <div class="row">
-        <?php foreach($films as $film): ?>
-          <div class="col-md-3">
-            <img src="<?php echo $film["Affiche"] ?>" class="img-mov img-thumbnail">
-            <div><?php echo $film["Nom"] ?></div>
-            <div class="line2">
-              <?php echo $film["Année"] ?> (<?php echo $film["Durée"] ?>)<br>
-            </div>
+        <div class="col-md-3">
+          <img src="<?php echo $film["Affiche"] ?>" class="img-mov img-thumbnail">
+          <div><?php echo $film["Nom"] ?></div>
+          <div class="line2">
+            <?php echo $film["Année"] ?> (<?php echo $film["Durée"] ?>)<br>
           </div>
-        <?php endforeach; ?>
+        </div>
       </div>
     </div>
   </div>

@@ -133,4 +133,3 @@ $GLOBALS['films'] = array(
     "Privé" => false,
     "Affiche" => "https://41.media.tumblr.com/64a0d6d20e5e419b4b894aef542a7abb/tumblr_nm5m3etarH1szjhaso1_500.png",
   )
-);

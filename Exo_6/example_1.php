@@ -1,10 +1,11 @@
-<?php 
+<?php
 
 // Récupération des fonctions
 require_once("config.php");
 require_once("functions.php");
 
-$films = films_all();
+$films = get_all_films();
+
 ?>
 
 <!DOCTYPE>
@@ -13,12 +14,12 @@ $films = films_all();
   <title>PHP - P20</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <style>.img-mov {height: 300px;}.col-md-3 {margin-bottom: 15px;}</style>
+    <style>.img-mov {height: 300px;} .col-md-3 {margin-bottom: 15px;}</style>
 </head>
 <body>
   <div class="col-md-12">
     <h1>Exemple 1</h1>
-    <hr /> 
+    <hr />
     <div class="container">
       <div class="row">
         <?php foreach($films as $film): ?>

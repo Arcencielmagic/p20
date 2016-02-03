@@ -4,7 +4,7 @@
 require_once("config.php");
 require_once("functions.php");
 
-$acteurs = get_all_acteurs();
+$acteurs = get_all_acteurs_unique();
 
 ?>
 
@@ -18,7 +18,7 @@ $acteurs = get_all_acteurs();
 </head>
 <body>
   <div class="col-md-12">
-    <h1>Exemple 3</h1>
+    <h1>Question 5</h1>
     <hr />
     <div class="container">
       <ul class="row">

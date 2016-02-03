@@ -1,5 +1,4 @@
-<?php 
-
+<?php
 
 // Récupération des fonctions
 require_once("config.php");
@@ -14,6 +13,7 @@ if(isset($_GET["Genre"])){
 }
 
 $acteurs = acteurs_genre($genre);
+
 ?>
 
 <!DOCTYPE>
@@ -22,7 +22,7 @@ $acteurs = acteurs_genre($genre);
   <title>PHP - P20</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <style>.img-mov {height: 300px;}.col-md-3 {margin-bottom: 15px;}</style>
+    <style>.img-mov {height: 300px;} .col-md-3 {margin-bottom: 15px;}</style>
 </head>
 <body>
   <div class="col-md-12">
