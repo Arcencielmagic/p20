@@ -4,7 +4,7 @@
 require_once("config.php");
 require_once("functions.php");
 
-$annees = get_all_annees_unique();
+$annees = get_all_items_unique("Année");
 
 ?>
 

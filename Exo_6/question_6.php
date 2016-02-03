@@ -4,7 +4,7 @@
 require_once("config.php");
 require_once("functions.php");
 
-$acteurs = get_all_items_unique("Acteur");
+$genres = get_all_items_unique("Genre");
 
 ?>
 
@@ -22,8 +22,8 @@ $acteurs = get_all_items_unique("Acteur");
     <hr />
     <div class="container">
       <ul class="row">
-        <?php foreach($acteurs as $acteur): ?>
-          <li class="col-md-12"><?php echo $acteur ?></li>
+        <?php foreach($genres as $genre): ?>
+          <li class="col-md-12"><?php echo $genre ?></li>
         <?php endforeach; ?>
       </ul>
     </div>

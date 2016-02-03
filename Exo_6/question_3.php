@@ -4,7 +4,7 @@
 require_once("config.php");
 require_once("functions.php");
 
-$acteurs = get_all_acteurs();
+$acteurs = get_all_items("Acteurs");
 
 ?>
 

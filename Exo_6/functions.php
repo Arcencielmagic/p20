@@ -28,44 +28,24 @@ function annee_sup($annee) {
   return $rows;
 }
 
-// Récupére tous les acteurs de tous les films
-function get_all_acteurs() {
+// Récupére tous les items de tous les films
+function get_all_items($key) {
   // films
   $films = get_all_films();
-  $acteurs = array();
+  $items = array();
 
   // Boucle sur les films
   foreach ($films as $film) {
-    foreach ($film["Acteurs"] as $acteur) {
-      array_push($acteurs, $acteur);
+    foreach ($film[$key] as $item) {
+      array_push($items, $item);
     }
   }
-  return array_unique($acteurs);
-}
-
-// Récupére tous les acteurs de tous les films (unique)
-function get_all_acteurs_unique() {
-  return array_unique(get_all_acteurs());
-}
-
-// Récupére tous les années de tous les films
-function get_all_annees() {
-  // films
-  $films = get_all_films();
-  $annees = array();
-
-  // Boucle sur les films
-  foreach ($films as $film) {
-    foreach ($film["Année"] as $annee) {
-      array_push($annees, $annee);
-    }
-  }
-  return array_unique($annees);
+  return $items;
 }
 
 // Récupére tous les années de tous les films (unique)
-function get_all_annees_unique() {
-  return array_unique(get_all_annees());
+function get_all_items_unique($key) {
+  return array_unique(get_all_items($key));
 }
 
 // Récupére tous les acteurs ayant jouer dans un film possèdant un genre spécifique
