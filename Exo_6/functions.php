@@ -28,6 +28,33 @@ function annee_sup($annee) {
   return $rows;
 }
 
+// Récupére tous les films en fonction du nombre de like
+function like_sup() {
+  $max = null;
+  // films
+  $films = get_all_films();
+  foreach ($films as $film) {
+    if($max < $film["Like"]) {
+      $max = $film["Like"];
+    }
+  }
+  return $max;
+}
+
+// Récupére tous les films en fonction de leur genre
+function film_genre($genre) {
+  // films
+  $films = get_all_films();
+  $rows = array();
+  foreach ($films as $film) {
+    if($film["Genre"] == $genre) {
+      array_push($rows, $film);
+    }
+  }
+  return $rows;
+}
+
+
 // Récupére tous les items de tous les films
 function get_all_items($key) {
   // films
@@ -46,6 +73,17 @@ function get_all_items($key) {
 // Récupére tous les années de tous les films (unique)
 function get_all_items_unique($key) {
   return array_unique(get_all_items($key));
+}
+
+// Permet d'aplatir un tableau
+function array_linearize($array) {
+  $linear_array = array();
+  foreach ($array as $sub_array) {
+    foreach ($sub_array as $item) {
+      array_push($linear_array, $item);
+    }
+  }
+  return $linear_array;
 }
 
 // Récupére tous les acteurs ayant jouer dans un film possèdant un genre spécifique

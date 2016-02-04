@@ -4,7 +4,16 @@
 require_once("config.php");
 require_once("functions.php");
 
-$acteurs = array_unique(array_linearize(get_all_items("Acteur")));
+$film_max = null;
+// films
+$films = get_all_films();
+foreach ($films as $film) {
+  if($film_max["Like"] < $film["Like"]) {
+    $film_max = $film;
+  }
+}
+
+$nomfilmlike = $film_max["Nom"]
 
 ?>
 
@@ -18,13 +27,11 @@ $acteurs = array_unique(array_linearize(get_all_items("Acteur")));
 </head>
 <body>
   <div class="col-md-12">
-    <h1>Question 5</h1>
+    <h1>Question 13</h1>
     <hr />
     <div class="container">
       <ul class="row">
-        <?php foreach($acteurs as $acteur): ?>
-          <li class="col-md-12"><?php echo $acteur ?></li>
-        <?php endforeach; ?>
+        <li class="col-md-12"><?php echo $pizza ?></li>
       </ul>
     </div>
   </div>

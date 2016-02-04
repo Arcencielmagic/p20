@@ -4,7 +4,7 @@
 require_once("config.php");
 require_once("functions.php");
 
-$acteurs = array_unique(array_linearize(get_all_items("Acteur")));
+$genres = film_genre("Drame");
 
 ?>
 
@@ -18,12 +18,12 @@ $acteurs = array_unique(array_linearize(get_all_items("Acteur")));
 </head>
 <body>
   <div class="col-md-12">
-    <h1>Question 5</h1>
+    <h1>Question 7</h1>
     <hr />
     <div class="container">
       <ul class="row">
-        <?php foreach($acteurs as $acteur): ?>
-          <li class="col-md-12"><?php echo $acteur ?></li>
+        <?php foreach($genres as $genre): ?>
+          <li class="col-md-12"><?php echo $genre ?></li>
         <?php endforeach; ?>
       </ul>
     </div>

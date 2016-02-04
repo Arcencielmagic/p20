@@ -18,7 +18,7 @@ $genres = get_all_items_unique("Genre");
 </head>
 <body>
   <div class="col-md-12">
-    <h1>Question 5</h1>
+    <h1>Question 6</h1>
     <hr />
     <div class="container">
       <ul class="row">
